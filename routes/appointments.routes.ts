@@ -5,6 +5,10 @@ const appointmentsRouter = Router();
 
 const appointments = [];
 
+appointmentsRouter.get('/', async (request, response)=>{
+    return  response.json(appointments);
+})
+
 appointmentsRouter.post('/', (request, response)=>{
     const { provider, date } = request.body;
     
